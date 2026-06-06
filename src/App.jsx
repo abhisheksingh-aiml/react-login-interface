@@ -4,12 +4,21 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleLogin = () => {
+    if (email === "abhi@gmail.com" && password === "82711") {
+      alert("Login succesfully");
+
+    }else{
+      alert("Invalid email or password");
+    }
+  };
+
   return(
     <div>
 
       <h1>Login Page</h1>
 
-      <input
+      <input 
 
       type="email"
       placeholder="Enter Email"
@@ -32,9 +41,8 @@ function App() {
 
        <br /><br />
 
-       <button>Login</button>
-       <p>Email: {email}</p>
-       <p>Password: {password}</p>
+       <button onClick={handleLogin}>Login</button>
+       
 
        
 
